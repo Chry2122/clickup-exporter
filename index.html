@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attachment Exporter for ClickUp — Chry's Tools</title>
+  <meta name="description" content="A Chrome extension that bulk-downloads ClickUp task attachments into an organized ZIP. Free with limits, or a one-time €19 lifetime Pro license.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="">
+        <span>Attachment Exporter <small>by Chry's Tools</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="hide-sm" href="#how">How it works</a>
+        <a class="hide-sm" href="#features">Features</a>
+        <a class="hide-sm" href="#pricing">Pricing</a>
+        <a class="hide-sm" href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="https://chrystools.lemonsqueezy.com/checkout/buy/8dc8eea8-e0aa-49bd-9e11-51157b52c952">Get Pro — €19</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Chrome extension for ClickUp</p>
+          <h1>Bulk-download task attachments into a clean ZIP.</h1>
+          <p class="lead">Pick a Workspace, Space, Folder, and List. The extension talks to the official ClickUp API and saves attachments on your computer, organized by list and task, plus an <code>index.csv</code>.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://chrystools.lemonsqueezy.com/checkout/buy/8dc8eea8-e0aa-49bd-9e11-51157b52c952">Get Pro — €19 lifetime</a>
+            <span class="btn btn-ghost disabled" aria-disabled="true" title="The extension is not listed on the Chrome Web Store yet.">Add to Chrome — coming soon</span>
+          </div>
+          <p class="note">Coming soon to the Chrome Web Store. Pro is a one-time payment, not a subscription. Payments are processed by Lemon Squeezy, the merchant of record.</p>
+        </div>
+        <aside class="preview" aria-label="Example ZIP layout">
+          <div class="preview-bar"><span class="dot"></span> export.zip</div>
+          <ul class="tree">
+            <li><span class="root">Design Sprint/</span>
+              <ul>
+                <li><span class="dir">Hero mockups/</span>
+                  <ul>
+                    <li class="file">homepage-v3.png</li>
+                    <li class="file">mobile-crop.jpg</li>
+                  </ul>
+                </li>
+                <li><span class="dir">Kickoff notes/</span>
+                  <ul>
+                    <li class="file">brief.pdf</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="file">index.csv</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-sub">Three steps, no account on our side, and no files uploaded to us.</p>
+        <div class="steps">
+          <article class="card">
+            <div class="step-num">1</div>
+            <h3>Connect with your ClickUp token</h3>
+            <p>Paste a personal ClickUp API token (it starts with <code>pk_</code>). It is stored only in <code>chrome.storage.local</code> on your device. We never see it.</p>
+          </article>
+          <article class="card">
+            <div class="step-num">2</div>
+            <h3>Choose a List</h3>
+            <p>Browse Workspace → Space → Folder → List and select what you want to export.</p>
+          </article>
+          <article class="card">
+            <div class="step-num">3</div>
+            <h3>Download the ZIP</h3>
+            <p>Attachments are saved as <code>{ListName}/{TaskName}/{filename}</code>, with an <code>index.csv</code> that lists what was exported.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="alt">
+      <div class="wrap">
+        <h2 class="section-title">Built to stay on your machine</h2>
+        <p class="section-sub">The extension has no backend of its own. The only network calls go to ClickUp and, for Pro licenses, Lemon Squeezy.</p>
+        <div class="features">
+          <article class="card">
+            <h3>Official ClickUp API only</h3>
+            <p>Downloads use ClickUp’s official API at <code>api.clickup.com</code>. This product is not affiliated with, endorsed by, or sponsored by ClickUp.</p>
+          </article>
+          <article class="card">
+            <h3>Your token stays local</h3>
+            <p>Your personal token is saved in the browser’s local extension storage. It is not sent to Chry's Tools, because we do not operate a server that receives it.</p>
+          </article>
+          <article class="card">
+            <h3>Organized archives</h3>
+            <p>Every export is a ZIP with a predictable folder layout, plus a CSV index you can open in Excel or Google Sheets.</p>
+          </article>
+          <article class="card">
+            <h3>Free to try, lifetime Pro</h3>
+            <p>The free tier is capped at 15 files and 1 List. Pro removes those limits with a one-time €19 license — no subscription.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <h2 class="section-title">Simple pricing</h2>
+        <p class="section-sub">Start free. Upgrade once if you need more than a single List or 15 files.</p>
+        <div class="pricing">
+          <article class="card price-card">
+            <p class="plan">Free</p>
+            <p class="amount">€0 <span>forever</span></p>
+            <ul>
+              <li>Export up to 15 files</li>
+              <li>1 List per export</li>
+              <li>Organized ZIP and <code>index.csv</code></li>
+              <li>Token stored only on your device</li>
+            </ul>
+            <span class="btn btn-light disabled" aria-disabled="true">Add to Chrome — coming soon</span>
+          </article>
+          <article class="card price-card featured">
+            <span class="badge">Lifetime</span>
+            <p class="plan">Pro</p>
+            <p class="amount">€19 <span>one-time</span></p>
+            <ul>
+              <li>The 15-file cap is removed</li>
+              <li>The 1-List cap is removed</li>
+              <li>Same local-only privacy model</li>
+              <li>License key delivered by Lemon Squeezy</li>
+              <li>14-day refund</li>
+            </ul>
+            <a class="btn btn-primary" href="https://chrystools.lemonsqueezy.com/checkout/buy/8dc8eea8-e0aa-49bd-9e11-51157b52c952">Get Pro</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="alt">
+      <div class="wrap">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-sub">Straight answers. No filler.</p>
+        <div class="faq">
+          <details class="card" open>
+            <summary>Is this an official ClickUp product?</summary>
+            <p>No. Attachment Exporter for ClickUp is made by Chry's Tools and is not affiliated with, endorsed by, or sponsored by ClickUp. It uses ClickUp’s public API with a token you provide.</p>
+          </details>
+          <details class="card">
+            <summary>Where is my API token stored?</summary>
+            <p>Only in <code>chrome.storage.local</code> on your computer. The extension does not upload the token to a Chry's Tools server. Network requests that need the token go directly to <code>api.clickup.com</code>.</p>
+          </details>
+          <details class="card">
+            <summary>Do you store my attachments?</summary>
+            <p>No. Files are downloaded to your computer and packed into a ZIP there. We do not host or archive your ClickUp files.</p>
+          </details>
+          <details class="card">
+            <summary>What is the difference between Free and Pro?</summary>
+            <p>Free is limited to 15 files and 1 List. Pro is a one-time €19 lifetime license that removes those limits. Both versions use the same export format and the same local storage model.</p>
+          </details>
+          <details class="card">
+            <summary>How do payments and license keys work?</summary>
+            <p>Checkout is handled by Lemon Squeezy, which acts as the merchant of record and handles applicable taxes such as EU VAT. After purchase you receive a license key. The extension activates and periodically validates that key with <code>api.lemonsqueezy.com</code>.</p>
+          </details>
+          <details class="card">
+            <summary>Can I get a refund?</summary>
+            <p>Yes. You can request a refund within 14 days of purchase. See the <a href="terms.html">Terms and Refund Policy</a> or email <span class="mono">licatagiuseppechristian@gmail.com</span>.</p>
+          </details>
+          <details class="card">
+            <summary>Which browsers are supported?</summary>
+            <p>It is a Manifest V3 Chrome extension. It is intended for Google Chrome and other Chromium-based browsers that support Chrome extensions. It is not yet available on the Chrome Web Store.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Questions, refund requests, or privacy inquiries go here.</p>
+        <div class="card contact-box">
+          <div>
+            <p style="margin:0;font-weight:700;">Email Chry's Tools</p>
+            <!-- Replace licatagiuseppechristian@gmail.com with your real address in every page. -->
+            <p class="hint">Replace this placeholder with your real email before sharing the site.</p>
+          </div>
+          <a class="contact-email" href="mailto:licatagiuseppechristian@gmail.com">licatagiuseppechristian@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <p>© 2026 Chry's Tools. Attachment Exporter for ClickUp.</p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Refunds</a>
+          <a href="#contact">Contact</a>
+          <a href="https://chrystools.lemonsqueezy.com/checkout/buy/8dc8eea8-e0aa-49bd-9e11-51157b52c952">Get Pro</a>
+        </nav>
+      </div>
+      <p class="disclaimer">Attachment Exporter for ClickUp is an independent product and is not affiliated with, endorsed by, or sponsored by ClickUp. ClickUp is a trademark of its respective owner. Payments are processed by Lemon Squeezy, the merchant of record.</p>
+    </div>
+  </footer>
+</body>
+</html>
